@@ -1,2 +1,2 @@
 # Modulo3JSDesafio6APIs
-## Se actualizan los archivos
+## En esta prueba programaré un conversor de monedas a partir de un monto en pesos chilenos. Para esto será necesario consultar la API mindicador.cl usando el método fetch. Luego, utilizaré una librería de JavaScript de gráficas para mostrar un historial de los últimos 10 días del valor de la moneda a convertir seleccionada.
