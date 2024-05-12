@@ -15,7 +15,7 @@ async function convertCurrency(){
     const valorMoneda = await obtenerApi(monedaSeleccionada);
     const valorFinal = (pesos/valorMoneda).toFixed(2);
     console.log("valor final: ",valorFinal);
-    span.innerHTML="resultado: $"+valorFinal;
+    span.innerHTML="Resultado: $"+valorFinal;
 }
 
 // Vamos a cosumir la API
@@ -28,7 +28,7 @@ async function obtenerApi(moneda){
         const {serie}=data;
         const datos = crearDatos(serie.slice(0,10).reverse(),moneda);
         renderGrafica(datos);
-        return serie[0].valor;    
+        return serie[0].valor;
     } catch (error) {
         alert("Error: problemas con el servidor.")
         console.log(error);
@@ -60,7 +60,7 @@ function formatDate(date) {
 }
 
 function crearDatos(serie,moneda){
-    
+
     const labels = serie.map(({fecha})=>formatDate(fecha));
     const data = serie.map(({valor})=>valor);
     const datasets = [
